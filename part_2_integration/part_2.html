@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Integration</title>
+	<script src="https://kit.fontawesome.com/d42a9557b8.js" crossorigin="anonymous"></script>
+	<style>
+		body {
+			background-color: #282c34;
+		}
+
+		.App-header {
+			height: 100vh;
+			width: 100vw;
+			display: flex;
+			flex-direction: column;
+			font-size: calc(10px + 2vmin);
+			color: white;
+			margin: -8px;
+		}
+
+		.Main {
+			margin: auto;
+			height: 50%;
+			width: 35%;
+			min-width: 450px;
+			min-height: 400px;
+
+			border-radius: 25px;
+
+			background-color: white;
+			box-shadow: 0px 5px 15px 7px rgba(0, 0, 0, 0.4);
+			display: flex;
+			flex-direction: column;
+		}
+
+		.User-Interface-Button {
+			margin-top: 5%;
+			margin-left: 10%;
+			width: 35%;
+			height: 40px;
+
+			border-radius: 25px;
+			border: 0;
+
+			background-color: #2700d426;
+
+			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+			font-weight: bold;
+			color: #2700d488;
+
+			transition: all 0.5s;
+
+			cursor: pointer;
+		}
+
+		.User-Interface-Button:hover {
+			transform: translateY(-2px);
+		}
+
+		.User-Interface-Button:active {
+			transform: translateY(4px);
+			border: 5px #2700d426 solid;
+		}
+
+		.Title-Text {
+			color: black;
+			margin-left: 10%;
+			margin-top: 5%;
+
+			font-size: large;
+			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+			font-weight: 600;
+		}
+
+		.Description-Text {
+			color: black;
+			margin-left: 10%;
+			margin-top: 5%;
+			width: 80%;
+			max-height: 3em;
+
+			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+			font-size: medium;
+			line-height: 1.5em;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+		}
+
+		.Info-Container {
+			width: 80%;
+			height: 15%;
+			margin-inline: auto;
+			margin-top: 5%;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.Status-Container {
+			height: 100%;
+			width: 25%;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+		}
+
+		.Status-Icon {
+			font-size: large;
+			color: black;
+		}
+
+		.Status-Text {
+			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+			font-size: medium;
+			color: black;
+		}
+
+		.Invite-Container {
+			height: 100%;
+			width: 55%;
+
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.Invite-Images-Container {
+			height: 80%;
+			width: 45%;
+
+			margin-block: auto;
+
+			display: flex;
+			align-items: center;
+			position: relative;
+		}
+
+		.Invite-Images-Container img {
+			height: 40px;
+			width: 40px;
+			border-radius: 50%;
+
+			position: relative;
+		}
+
+		.Avatar-Image-2 {
+			left: -10px;
+		}
+
+		.Avatar-Image-3 {
+			left: -20px;
+		}
+
+		.Invite-Button {
+
+			margin-block: auto;
+			height: 70%;
+			width: 40%;
+			background-color: rgba(0, 0, 255, 0.61);
+			border: 0;
+			border-radius: 25px;
+			color: white;
+			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+		}
+
+		.Side-By-Side-Button {
+			margin-inline: auto;
+			margin-top: auto;
+			margin-bottom: 10%;
+			height: 15%;
+			width: 80%;
+
+			border: 1px black solid;
+			border-radius: 50px;
+
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+
+		.Side-By-Side-Button-Content {
+			height: 45%;
+			width: 40%;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			flex-direction: row;
+		}
+
+		.Side-By-Side-Button-Content i {
+			color: black;
+			font-size: large;
+		}
+
+		.Side-By-Side-Button-Limiter {
+			width: 1px;
+			height: 45%;
+
+			background-color: black;
+		}
+
+		.Side-By-Side-Button-Content-Text {
+			color: black;
+
+			font-size: medium;
+			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+		}
+	</style>
+</head>
+
+<body>
+	<div class="App">
+		<header class="App-header">
+			<div class="Main">
+				<button class="User-Interface-Button">
+					User Interface
+				</button>
+				<div class="Title-Text">Service Page Website</div>
+				<div class="Description-Text">Lorem, ipsum dolor sit amet consectetur elit. Quae facilis maiores rerum
+					reiciendis saepe asperiores, obcaecati a accusamus modi quasi minima tenetur enim culpa corporis
+					sed. Maiores voluptates dolore fuga.</div>
+				<div class="Info-Container">
+					<div class="Status-Container">
+						<i class="fa-regular fa-circle-check Status-Icon"></i>
+						<div class="Status-Text">0/20</div>
+					</div>
+					<div class="Invite-Container">
+						<div class="Invite-Images-Container">
+							<img class="Avatar-Image-1" src="https://www.w3schools.com/howto/img_avatar.png" alt="">
+							<img class="Avatar-Image-2" src="https://www.w3schools.com/howto/img_avatar2.png" alt="">
+							<img class="Avatar-Image-3" src="https://www.w3schools.com/howto/img_avatar.png" alt="">
+						</div>
+						<button class="Invite-Button">Invite</button>
+					</div>
+				</div>
+				<div class="Side-By-Side-Button">
+					<div class="Side-By-Side-Button-Content">
+						<i class="fa-solid fa-link"></i>
+						<div class="Side-By-Side-Button-Content-Text">4 Attachment</div>
+					</div>
+					<div class="Side-By-Side-Button-Limiter"></div>
+					<div class="Side-By-Side-Button-Content">
+						<i class="fa-solid fa-comment"></i>
+						<div class="Side-By-Side-Button-Content-Text">10 Comment</div>
+					</div>
+				</div>
+			</div>
+		</header>
+	</div>
+</body>
+
+</html>

@@ -22,9 +22,9 @@ Ce test est divisé en trois partie :
 
 Pour lancer le back :
   - Le back se lance sur le port 5001, veuillez verifier que rien n'est déjà déployer sur celui-ci de votre coté.
-  - ```bash cd backend && npm i && npm run start```
+  - ```cd backend && npm i && npm run start```
   
 Pour lancer le front:
   - Le front se lance sur le port 3000, veuillez verifier que rien n'est déjà déployer sur celui-ci de votre coté.
   - Il est disponible sur votre adresse, http://localhost:3000
-  - sur un autre invité de commande : ```bash cd front && npm i && npm run start```
+  - sur un autre invité de commande : ```cd front && npm i && npm run start```
